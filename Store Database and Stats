@@ -1,0 +1,45 @@
+/** store:
+shirts (10)
+shoes (2)
+pants (8)
+hats (12)
+sweater (3)
+socks (5)
+shorts (9)
+jewlery (8)
+makeup (5)
+soap (9)
+dishes (5)
+hair care (5)
+pet supplies (19)
+bathroom supplies (4)
+cleaner (6)
+
+**/
+
+CREATE TABLE staceys_store (id INTEGER PRIMARY KEY, name TEXT, color TEXT, quantity INTEGER, price NUMERIC);
+
+INSERT INTO staceys_store VALUES (1," shirts", "blue", 10, 12);
+INSERT INTO staceys_store VALUES (2, "shoes", "white", 2,23); INSERT INTO staceys_store VALUES (3, "pants", "gray", 8, 10);
+INSERT INTO staceys_store VALUES (4, "hats", "pink", 12, 5);
+INSERT INTO staceys_store VALUES (5, "sweater", "purple", 3, 13);
+INSERT INTO staceys_store VALUES (6, "socks", "white", 5, 10);
+INSERT INTO staceys_store VALUES (7, "shorts", "blue", 9, 18);
+INSERT INTO staceys_store VALUES (8, "jewlery", "gold", 8, 15);
+INSERT INTO staceys_store VALUES (9, "makeup", "ivory", 5, 6);
+INSERT INTO staceys_store VALUES (10, "soap", "white", 9, 2);
+INSERT INTO staceys_store VALUES (11, "dishes", "grey", 5, 20);
+INSERT INTO staceys_store VALUES (12, "hair care", "any", 5, 8);
+INSERT INTO staceys_store VALUES (14, "bathroom supplies", "no color", 4, 6);
+INSERT INTO staceys_store VALUES (15, "cleaner", "no color", 6, 6);
+SELECT * FROM staceys_store;
+
+SELECT price FROM staceys_store; 
+SELECT * FROM staceys_store;
+SELECT * FROM staceys_store WHERE quantity > 10;
+SELECT * FROM staceys_store ORDER BY color; 
+
+SELECT SUM (price) FROM staceys_store;
+SELECT name, SUM (price) FROM staceys_store GROUP by name;
+SELECT price FROM staceys_store WHERE price >5;
+SELECT * FROM staceys_store WHERE quantity > 10;
